@@ -55,7 +55,8 @@ int main() {
     struct dirent *dir;
     uint8_t ffBitmask[FF_CNT / 8];
     char devicename[PATH_MAX];
-    const char *INPUT_DIR = "/dev/input/";
+    // custom path in waydroid for the host's haptic device
+    const char *INPUT_DIR = "/dev/haptics/";
     bool supportGain = false, supportEffects = false;
     bool found = false;
     int fd, ret, vibraFd = -1;
